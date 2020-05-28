@@ -40,6 +40,7 @@ func main() {
 	if runtime.GOOS == "linux" {
 		args = append(args, "--class=Lorca")
 	}
+	//创建一个 html UI, (uri,tmp_dir,width,height)
 	ui, err := lorca.New("", "", 1600, 1200, args...)
 	if err != nil {
 		log.Fatal(err)
